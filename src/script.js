@@ -60,4 +60,4 @@ form.addEventListener("submit", handleSubmit);
 //let celsiusLink = document.querySelector("#celsius-link");
 //celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-displayCity("London");
+search("London");
