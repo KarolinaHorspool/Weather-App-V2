@@ -47,9 +47,27 @@ function handleSubmit(event) {
   search(cityInputElement);
 }
 
+function currentPosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiKey = "2973349911f20f7a047092ceb58b6dc5";
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(`${url}`).then(displayWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function getCurrentPosition() {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(currentPosition);
+}
+
+let locationButton = document.querySelector("#current-location");
+locationButton.addEventListener("click", getCurrentPosition);
 
 
-let celsiusTemperature = null;
+//let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
