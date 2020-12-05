@@ -19,6 +19,10 @@ body {
   box-shadow: 2px 1px 8px;
 }
 
+h1 {
+  padding: 10px;
+}
+
 ul {
   margin: 0;
   padding: 0;
