@@ -4,7 +4,23 @@ body {
 }
 
 button {
+  display: block;
+  margin: 20px auto;
+  border: 5px groove #dab1ea;
+  background: #dab1ea;
+  color: #ab4779;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  padding: 16px 24px;
+  border-radius: 30px;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(#ab4779, #ab87c7);
   color: #dab1ea;
+  border: 5px groove #ab4779;
 }
 
 .card {
