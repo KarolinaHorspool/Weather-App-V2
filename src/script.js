@@ -7,7 +7,7 @@ function display_c() {
                 var x1 = x.toUTCString();// changing the display to UTC string
                 document.getElementById('ct').innerHTML = x1;
                 tt = display_c();
-            }`${day} ${month} ${date}, ${hours}:${minutes}, ${year}`;
+            }
 let now = new Date();
 
 function displayTemperature(response) {
