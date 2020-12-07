@@ -1,72 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"/>
-        <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <title>Weather application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb‚8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/0aca35a036.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="src/script.js"></script>
-    <title>Weather App</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
-    </style>
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet" />
 </head>
+
 <body>
     <div class="container">
-        <div class="card">
-            <div class="weather-app-wrapper">
-                <div class="weather-app">
-                    <div class="overview">
-                        <body onload=display_ct();>
-                            <li>Now: <span id='ct'></span></li>
-                            
-                            <h1 id="city">Stamford</h1>
-                        <ul>
-                            
-                            <li id="description"></li>
-                        </ul>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="clearfix weather-temperature">
-                                <img src="" alt="Clear" id="icon" class="float-left" />
-                                <div class="float-left">
-                                    <strong id="temperature"></strong><span class="units"><a href="#" id="celsius-link"
-                                            class="active">°C</a> |
-                                        <a href="#" id="fahrenheit-link">°F</a></span>
-                                </div>
+        <div class="weather">
+            <div class="overview">
+               <body onload=display_ct();>
+                    <li>Now: <span id='ct'></span></li>
+            
+            <div class="current-weather">
+                <div class="overview">
+                    <h2 id="city">Stamford</h2>
+                    <ul>
+                        <li>Last updated: <span class="today" id="date">Tuesday</span> </li>
+                        <li><span class="terms" id="terms">cloudy</span><br /></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="clearfix weather-temperature">
+                            <i class="fas fa-cloud-moon"></i>
+                            <div class="float-left">
+                                <strong class="temperature" id="temperature"></strong><span class="units"><a href="#"
+                                        id="celsius-link" class="active">°C</a> |
+                                    <a href="#" id="fahrenheit-link">°F</a></span>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <ul>
-                                <li>Humidity: <span id="humidity"></span>%</li>
-                                <li>Wind: <span id="wind"></span> km/h</li>
-                            </ul>
-                        </div>
                     </div>
-                    <div class="row weather-forecast" id="forecast"></div>
+
                 </div>
-                <form id="search-form" class="mb-3">
-                    <div class="row">
-                        <div class="col-9">
-                            <input type="search" placeholder="Type a city.." class="form-control" id="city-input" autocomplete="off" />
-                        </div>
-                        <div class="col-3">
-                            <input type="submit" value="Search" class="btn btn-primary w-200" id="search-value" />
-                            <button type="submit" class="btn btn-secondary btn-sm" id="current-location">Current Location</button>
-                        </div>
-                    </div>
-                </form>
-                <small>
-                    <a href="" target="_blank"></a>Open-source code</a>
-                    by K Horspool
-                </small>
+
             </div>
-            </div>
-            <script src="src/script.js"></script>
-            </body>
-            
-            </html>
+
+
+
+        </div>
+        <div class="row weather-forecast" id="forecast">
+<form class="inline" id="search-form">
+    <div class="form-group mb-2" class="city-name">
+        <input type="search" class="city-name" placeholder="Enter a cityname" id="city-name-input" autocomplete="off" />
+
+        <button type="submit" class="btn btn-secondary btn-sm" type="submit">Search</button>
+        <button type="submit" class="btn btn-secondary btn-sm" id="current-location">Current
+            Location</button>
+    </div>
+</form>
+        </div>
+    </div>
+    </div>
+
+    <p> Coded by Karolina Horspool</p>
+
+    </div>
+    </div>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+
+</html>
